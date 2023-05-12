@@ -1,0 +1,117 @@
+
+@font-face {
+	@include font-include('e-Ukraine', 200, swap, normal, 'e-Ukraine-UltraLight');
+}
+
+@font-face {
+	@include font-include('e-Ukraine', 300, swap, normal, 'e-Ukraine-Light');
+}
+
+@font-face {
+	@include font-include('e-Ukraine', 400, swap, normal, 'e-Ukraine-Regular');
+}
+
+@font-face {
+	@include font-include('e-Ukraine', 500, swap, normal, 'e-Ukraine-Medium');
+}
+
+@font-face {
+	@include font-include('e-Ukraine', 700, swap, normal, 'e-Ukraine-Bold');
+}
+
+@font-face {
+	@include font-include('e-UkraineHead', 200, swap, normal, 'e-UkraineHead-UltraLight');
+}
+
+@font-face {
+	@include font-include('e-UkraineHead', 400, swap, normal, 'e-UkraineHead-Regular');
+}
+
+@font-face {
+	@include font-include('e-UkraineHead', 700, swap, normal, 'e-UkraineHead-Bold');
+}
+
+@font-face {
+	@include font-include('OpenSans', 600, swap, normal, 'OpenSans-SemiBold');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 700;
+
+	font-size: 1.25rem;
+	line-height: 120%;
+
+	@include _550 {
+		font-size: 1.75rem;
+	}
+
+	@include _768 {
+		font-size: 2.5rem;
+	}
+
+	@include _992 {
+		font-size: 3.125rem;
+	}
+}
+
+.subtitle {
+	font-family: var(--title-font);
+	font-weight: 200;
+
+	@include _550 {
+		font-size: 1.125rem;
+	}
+	
+	@include _768 {
+		font-size: 1.25rem;
+	}
+	
+	@include _992 {
+		font-size: 1.5rem;
+	}
+
+	line-height: 120.833333%;
+	text-transform: uppercase;
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 120%;
+
+	font-size: 1.5rem;
+
+	@include _768 {
+		font-size: 2rem;
+	}
+
+	@include _992 {
+		font-size: 2.8125rem;
+	}
+
+	&._min {
+		font-size: 1.5rem;
+
+		@include _768 {
+			font-size: 1.75rem;
+		}
+	
+		@include _992 {
+			font-size: 2rem;
+		}	
+	}
+
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	font-weight: 700;
+
+}
+
+.txt-center {
+	text-align: center;
+}

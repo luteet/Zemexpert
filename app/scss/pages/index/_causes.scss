@@ -1,0 +1,70 @@
+.causes {
+
+	padding-top: 40px; padding-bottom: 40px;
+
+	@include _992 {
+		padding-top: 90px; padding-bottom: 90px;
+	}
+
+	// .causes__title
+
+	&__title {
+	}
+
+	// .causes__list
+
+	&__list {
+		padding-top: 26px;
+
+		display: grid;
+		gap: 20px;
+		@include _550 {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 40px 30px;
+		}
+	}
+
+	// .causes__card
+
+	&__card {
+
+		text-align: center;
+
+		background: #BDD7E8;
+		border-radius: 30px;
+
+		padding: 0 14px 22px 14px;
+
+		display: flex;
+		flex-direction: column;
+
+		// .causes__card--image
+
+		&--image {
+			max-width: 200px; width: 100%;
+			margin: 0 auto -25px auto;
+
+			flex: 1 1 auto;
+
+			display: flex;
+			align-items: center;
+		}
+
+		h3 {
+			font-weight: 700;
+			font-size: 1.25rem;
+			line-height: 120%;
+
+			position: relative;
+			z-index: 2;
+		}
+
+		p {
+			padding-top: 11px;
+
+			font-weight: 200;
+			font-size: 0.875rem;
+			line-height: 157.142857%;
+		}
+	}
+}

@@ -1,0 +1,178 @@
+.footer {
+
+	padding-top: 50px;
+
+	flex: 0 0 auto;
+
+	color: var(--white);
+	background: var(--black);
+
+
+	display: grid;
+	justify-content: center;
+	@include _768 {
+		grid-template-columns: 1fr 1fr;
+		gap: 0 20px;
+		justify-content: space-between;
+
+		padding-top: 94px;
+	}
+	@media (min-width: #{$container}px) {
+		gap: 0;
+		grid-template-columns: 490px 490px;
+	}
+	
+
+	// .footer__col
+
+	&__col {
+	}
+
+	// .footer__feedback
+
+	&__feedback {
+
+		
+
+		// .footer__feedback--title
+
+		&--title {
+			text-align: center;
+			@include _768 {
+				text-align: left;
+			}
+		}
+
+		&--title + &--list {
+			padding-top: 14px;
+		}
+
+		// .footer__feedback--list
+
+		&--list {
+
+			padding-top: 34px;
+
+			li {
+				&:not(:first-child) {
+					margin-top: 19px;
+				}
+			}
+
+			a {
+				fill: var(--white);
+
+				display: flex;
+				align-items: center;
+
+				color: var(--white);
+
+				svg {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	// .footer__social
+
+	&__social {
+		margin-top: 15px;
+		@include _768 {
+			padding-top: 34px; margin-top: 27px;
+			border-top: 1px solid rgba(255, 255, 255, 0.5);
+		}
+
+		ul {
+			max-width: 363px;
+		}
+
+		li:not(:first-child) {
+			margin-top: 19px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+
+		a span {
+			display: block;
+			flex: 1 1 auto;
+			text-align: center;
+		}
+	}
+
+	// .footer__form
+
+	&__form {
+		margin-top: 16px;
+
+		@include _768 {
+			margin-top: 0;
+		}
+	}
+
+	// .footer__copy
+
+	&__copy {
+		margin-top: 21px;
+
+		@include _768 {
+			grid-column: 2 span;
+			padding: 29px 0;
+
+			margin-top: 85px;
+		}
+
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+		padding: 22px 0;
+
+		font-weight: 200;
+		line-height: 118.75%;
+		text-align: center;
+
+		color: rgba(255, 255, 255, 0.5);
+
+	}
+
+	&__add-social {
+
+		margin-top: 20px; padding-top: 17px;
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+		text-align: center;
+		
+		h4 {
+			font-family: var(--title-font);
+			font-weight: 500;
+			font-size: 1.25rem;
+			line-height: 120%;
+		}
+
+		
+
+		a {
+			margin-top: 17px;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			padding: 15px 12px;
+
+			border: 1px solid #FFFFFF;
+			border-radius: 35px;
+
+			color: var(--white);
+
+			img:nth-child(3) {
+				margin-right: 5px;
+			}
+			
+		}
+	}
+}
+
+

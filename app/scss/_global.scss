@@ -1,0 +1,237 @@
+@use 'sass:math';
+
+:root {
+	--title-font: 'e-UkraineHead', sans-serif;
+	--main-font: 'e-Ukraine', sans-serif;
+
+	--white: #FFF;
+	--white-hover: #e7e7e7;
+	--white-active: #cccccc;
+	--black: #000;
+	--black-hover: #333333;
+	--black-active: #161616;
+
+	--container-padding: 12px;
+}
+
+html, body {
+	font-size: 16px;
+	min-height: 100%;
+	min-width: 320px;
+}
+
+body {
+	font-family: var(--main-font);
+	
+	font-weight: 400;
+	line-height: 150%;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-right: var(--popup-padding);
+
+	&._mob-menu-active {
+		overflow: hidden;
+	}
+
+	&._popup-active {
+		overflow: hidden;
+	}
+	
+}
+
+section {
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper {
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	overflow: hidden;
+
+	flex: 1 0 auto;
+	position: relative;
+}
+
+.container {
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	
+	@media (min-width: #{$container}px) {
+		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+	}
+}
+
+.section-padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	@include _768 {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include _992 {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	
+	padding: 11.5px 20px;
+	&._large {
+		padding: 19px 20px;
+		text-transform: uppercase;
+	}
+
+	background: var(--black);
+	color: var(--white);
+
+	border-radius: 100px;
+	
+	font-weight: 500;
+	line-height: 200%;
+
+	transition: background .3s ease;
+
+	&:hover {
+		background: var(--black-hover);
+	}
+	
+	&:active {
+		background: var(--black-active);
+	}
+}
+
+.social-btn {
+	display: inline-flex;
+	align-items: center;
+
+	padding: 5px 8px 5px 6px;
+	&._large {
+		font-size: 1.125rem;
+		padding: 12px 18px 12px 14px;
+		img {
+			width: 44px; height: 44px;
+		}
+	}
+	img {
+		margin-right: 3px;
+	}
+
+	@include _550 {
+		padding: 5px 18px 5px 6px;
+		&._large {
+			padding: 12px 18px 12px 14px;
+			img {
+				width: 44px; height: 44px;
+			}
+		}
+		img {
+			margin-right: 8px;
+		}
+	}
+
+	@include _768 {
+		font-size: 1rem;
+		padding: 8px 10px 8px 6px;
+		&._large {
+			font-size: 1.125rem;
+			padding: 12px 18px 12px 14px;
+			img {
+				width: 44px; height: 44px;
+			}
+		}
+		img {
+			width: 35px; height: 35px;
+		}
+	}
+	@media (min-width: #{$container}px) {
+		font-size: 1.125rem;
+		padding: 4.5px 18px 4.5px 6px;
+		&._large {
+			font-size: 1.125rem;
+			padding: 12px 18px 12px 14px;
+		}
+		img {
+			width: 44px; height: 44px;
+		}
+	}
+
+	border: 1px solid var(--black);
+	border-radius: 35px;
+
+	font-weight: 700;
+	font-size: 0.75rem;
+	line-height: 178%;
+	color: var(--black);
+	&._light {
+		border-color: var(--white);
+		color: var(--white);
+		transition: color .2s ease;
+		&:hover {
+			color: var(--white-hover);
+		}
+		
+		&:active {
+			color: var(--white-active);
+		}
+	}
+
+	
+
+	
+}
+
+.hide-on-mob {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.hide-on-tablet {
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px; height: 1px;
+	margin: -1px; padding: 0;
+	border: 0;
+	
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.hide-on-container {
+	@media (max-width: #{$container}px) {
+		display: none;
+	}
+}
+
+.visible-on-tablet {
+	@include _768 {
+		display: none;
+	}
+}
+
+.accent-bg {
+	background: #BDD7E8;
+}

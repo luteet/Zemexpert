@@ -1,0 +1,28 @@
+input, textarea {
+	&::placeholder {
+		transition: opacity .2s ease;
+		opacity: 1;
+	}
+	
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+.input {
+	padding: 24px 34px;
+
+	background: #E6EBE6;
+	border-radius: 35px;
+
+	font-weight: 200;
+	font-size: 1rem;
+	@include _992 {
+		font-size: 1.125rem;
+	}
+	line-height: 118.75%;
+	color: var(--black);
+
+	width: 100%;
+
+}

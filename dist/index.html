@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.image-body {
+			width: 100%;
+			position: relative;
+		}
+
+		.image-body img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.lazy {
+			opacity: 0;
+		}
+
+		.lazy.loaded {
+			opacity: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style-critical.min.css">
+	<link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'; this.onload=null;">
+	<script>
+		document.querySelector('html').style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+	</script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.svg" alt="Логотип сайта" width="190" height="55" loading="lazy" class="header__logo--img">
+					<img src="img/logo-mob.svg" alt="Мобильный логотип сайта" width="50" height="32" loading="lazy" class="header__logo--img">
+				</a>
+				<div class="header__wrapper">
+					<a href="#" class="header__social-btn social-btn" aria-label="Написати в телеграм">
+						<img src="img/social/telegram.svg" width="16" height="16" loading="lazy" alt="">
+						<span>Написати в телеграм</span>
+					</a>
+					<a href="#" class="header__tel hide-on-mob" aria-label="+38 (099) 999 99 99">
+						<svg width="28" height="28" viewBox="0 0 38 38">
+							<use xlink:href="img/sprites.svg#phone"></use>
+						</svg>
+						<span>+38 (099) 999 99 99</span>
+					</a>
+					<div class="header__lang">
+						<ul>
+							<li>
+								<a href="#" class="current">
+									UA
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									RU
+								</a>
+							</li>
+						</ul>
+					</div>
+					<a href="#order-service" class="header__btn btn open-popup hide-on-container">
+						Замовити дзвінок
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="hero container accent-bg">
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
+							<source srcset="img/index/hero/index-hero-image.webp" type="image/webp">
+							<img src="img/index/hero/index-hero-image.png" alt="" width="430" height="687" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<div class="hero__content">
+					<span class="hero__subtitle subtitle">
+						Працюємо по всій Україні
+					</span>
+					<h1 class="hero__title main-title">
+						Отримання кадастрового номеру
+					</h1>
+					<div class="hero__text">
+						<p>
+							Юридична допомога з питань оформлення кадастрового номера на земельну ділянкуі
+						</p>
+					</div>
+					<a href="#order-service" class="hero__btn btn open-popup">
+						Замовити послугу
+					</a>
+				</div>
+			</section>
+			<section class="for container">
+				<div class="for__col">
+					<h2 class="for__title title">
+						Для чого потрібен кадастровий номер
+					</h2>
+					<a href="#order-service" class="for__btn btn open-popup hide-on-mob">
+						Дізнатися детальніше
+					</a>
+				</div>
+				<div class="for__col">
+					<ul class="for__list">
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							купівлі-продажу будинку;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							купівлі-продажу земельної ділянки;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							договору дарування будинку;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							договору дарування земельної ділянки;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							приватизації земельної ділянки;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							заключення договору оренди;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							продовження договору оренди;
+						</li>
+						<li>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#next"></use>
+							</svg>
+							отримання спадщіни;
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="how container accent-bg">
+				<h2 class="how__title title">
+					Як отримати кадастровий номер на землю
+				</h2>
+				<div class="how__note">
+					<h3>
+						Процес отримання кадастрового номера на земельну ділянку разом з ZEMEXPERT - зрозумілий та швидкий
+					</h3>
+					<p>
+						Наша компанія є лідером в галузі земельного права, і ми з радістю продемонструємо свій профессіоналізм та вирішимо ваше питання легко, швидко і за приємною ціною
+					</p>
+				</div>
+				<form method="post" class="how__form">
+					<h3>
+						Дізнатись детальніше
+					</h3>
+					<div class="how__form--wrapper">
+						<label>
+							<input type="text" name="your-name" placeholder="Ім'я" required class="input">
+						</label>
+						<label>
+							<input type="tel" name="phone" placeholder="Номер телефону" required class="input">
+						</label>
+						<button class="btn" type="submit">
+							Надіслати
+						</button>
+					</div>
+				</form>
+			</section>
+			<section class="documents container">
+				<h2 class="documents__title title txt-center">
+					Список необхідних документів
+				</h2>
+				<ul class="documents__list">
+					<li class="documents__card">
+						<div class="documents__card--image image-body">
+							<picture>
+								<source srcset="img/index/documents/document-card-image-1.avif" type="image/avif">
+								<source srcset="img/index/documents/document-card-image-1.webp" type="image/webp">
+								<img src="img/index/documents/document-card-image-1.jpg" alt="" width="350" height="253" loading="lazy">
+							</picture>
+							<span class="documents__card--image-text">КОПІЯ</span>
+						</div>
+						<div class="documents__card--text">
+							Паспорт
+						</div>
+					</li>
+					<li class="documents__card">
+						<div class="documents__card--image image-body">
+							<picture>
+								<source srcset="img/index/documents/document-card-image-2.avif" type="image/avif">
+								<source srcset="img/index/documents/document-card-image-2.webp" type="image/webp">
+								<img src="img/index/documents/document-card-image-2.jpg" alt="" width="350" height="253" loading="lazy">
+							</picture>
+							<span class="documents__card--image-text">КОПІЯ</span>
+						</div>
+						<div class="documents__card--text">
+							ІІН
+						</div>
+					</li>
+					<li class="documents__card">
+						<div class="documents__card--image image-body">
+							<picture>
+								<source srcset="img/index/documents/document-card-image-3.avif" type="image/avif">
+								<source srcset="img/index/documents/document-card-image-3.webp" type="image/webp">
+								<img src="img/index/documents/document-card-image-3.jpg" alt="" width="350" height="253" loading="lazy">
+							</picture>
+							<span class="documents__card--image-text">КОПІЯ</span>
+						</div>
+						<div class="documents__card--text">
+							Рішення органу місцевого самоврядування на виготовлення технічної документації (у разі приватизації)
+						</div>
+					</li>
+					<li class="documents__card">
+						<div class="documents__card--image image-body">
+							<picture>
+								<source srcset="img/index/documents/document-card-image-4.avif" type="image/avif">
+								<source srcset="img/index/documents/document-card-image-4.webp" type="image/webp">
+								<img src="img/index/documents/document-card-image-4.jpg" alt="" width="350" height="253" loading="lazy">
+							</picture>
+							<span class="documents__card--image-text">оригінал</span>
+						</div>
+						<div class="documents__card--text">
+							Державний акт (за наявності)
+						</div>
+					</li>
+					<li class="documents__card">
+						<div class="documents__card--image image-body">
+							<picture>
+								<source srcset="img/index/documents/document-card-image-5.avif" type="image/avif">
+								<source srcset="img/index/documents/document-card-image-5.webp" type="image/webp">
+								<img src="img/index/documents/document-card-image-5.jpg" alt="" width="350" height="253" loading="lazy">
+							</picture>
+							<span class="documents__card--image-text">HOT КОПІЯ</span>
+						</div>
+						<div class="documents__card--text">
+							Правоустановчі документи на будівлі (за наявності)
+						</div>
+					</li>
+					<li class="documents__card">
+						<div class="documents__card--image image-body">
+							<picture>
+								<source srcset="img/index/documents/document-card-image-6.avif" type="image/avif">
+								<source srcset="img/index/documents/document-card-image-6.webp" type="image/webp">
+								<img src="img/index/documents/document-card-image-6.jpg" alt="" width="350" height="253" loading="lazy">
+							</picture>
+							<span class="documents__card--image-text">КОПІЯ</span>
+						</div>
+						<div class="documents__card--text">
+							Технічний паспорт (за наявності)
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="causes container">
+				<h2 class="causes__title title txt-center">
+					Чому клієнти обирають ZEM
+				</h2>
+				<ul class="causes__list">
+					<li class="causes__card">
+						<div class="causes__card--image">
+							<div class="causes__card--image-body image-body">
+								<picture>
+									<source srcset="img/index/causes/causes-sticker-1.avif" type="image/avif">
+									<source srcset="img/index/causes/causes-sticker-1.webp" type="image/webp">
+									<img src="img/index/causes/causes-sticker-1.png" alt="" width="200" height="200" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<h3>
+							Швідкість та <br> зручність
+						</h3>
+						<p>
+							Ми працюємо в будь якій точці України. Також для вашого комфорту та економії часу маємо можливість виконати роботу навіть дистанційно.
+						</p>
+					</li>
+					<li class="causes__card">
+						<div class="causes__card--image">
+							<div class="causes__card--image-body image-body">
+								<picture>
+									<source srcset="img/index/causes/causes-sticker-2.avif" type="image/avif">
+									<source srcset="img/index/causes/causes-sticker-2.webp" type="image/webp">
+									<img src="img/index/causes/causes-sticker-2.png" alt="" width="200" height="200" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<h3>
+							Гарантований результат та безпека
+						</h3>
+						<p>
+							Для нас не їснує задач, які б наши фахівці не могли виконати. В іншому випадку повернемо гроші в 100% обсязі
+						</p>
+					</li>
+					<li class="causes__card">
+						<div class="causes__card--image">
+							<div class="causes__card--image-body image-body">
+								<picture>
+									<source srcset="img/index/causes/causes-sticker-3.avif" type="image/avif">
+									<source srcset="img/index/causes/causes-sticker-3.webp" type="image/webp">
+									<img src="img/index/causes/causes-sticker-3.png" alt="" width="200" height="200" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<h3>
+							Лідерські позиции в галузі землеустрою
+						</h3>
+						<p>
+							За 10 років існування компанії допомогли сотням клієнтів отримати документи з позитивним результатом, тому що ми знаємо про землю все
+						</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="footer container">
+			<div class="footer__col">
+				<div class="footer__feedback">
+					<h2 class="footer__feedback--title title">
+						Зв’язатись з нами
+					</h2>
+					<ul class="footer__feedback--list hide-on-tablet">
+						<li>
+							<a href="tel:+380999999999">
+								<svg width="38" height="38" viewBox="0 0 38 38">
+									<use xlink:href="img/sprites.svg#phone"></use>
+								</svg>
+								+38 (099) 999 99 99
+							</a>
+						</li>
+						<li>
+							<a href="mailto:zemexpert@gmai.com">
+								<svg width="38" height="38" viewBox="0 0 38 38">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+								zemexpert@gmai.com
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__social visible-on-tablet">
+					<ul>
+						<li>
+							<a href="tel:+380999999999" class="social-btn _light _large" aria-label="Підписатись">
+								<img src="img/social/instagram.svg" width="16" height="16" alt="">
+								<span>+38 (099) 999 99 99</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-btn _light _large" aria-label="Написати в телеграм">
+								<img src="img/social/telegram-2.svg" width="16" height="16" alt="">
+								<span>Написати в телеграм</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__social hide-on-tablet">
+					<ul>
+						<li>
+							<a href="#" class="social-btn _light _large" aria-label="Підписатись">
+								<img src="img/social/instagram.svg" width="16" height="16" alt="">
+								<span>Підписатись</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="social-btn _light _large" aria-label="Написати в телеграм">
+								<img src="img/social/telegram-2.svg" width="16" height="16" alt="">
+								<span>Написати в телеграм</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__col">
+				<form method="post" class="footer__form feedback-form">
+					<h2 class="feedback-form__title title _min">
+						Зворотній зв’язок
+					</h2>
+					<div class="feedback-form__wrapper">
+						<label>
+							<input type="text" name="your-name" placeholder="Ім’я" required class="input">
+						</label>
+						<label>
+							<input type="tel" name="phone" placeholder="Номер телефону" required class="input">
+						</label>
+						<button class="btn _large" type="submit">
+							Замовити послугу
+						</button>
+					</div>
+				</form>
+				<div class="footer__feedback visible-on-tablet">
+					<ul class="footer__feedback--list">
+						<li>
+							<a href="mailto:zemexpert@gmai.com">
+								<svg width="38" height="38" viewBox="0 0 38 38">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+								zemexpert@gmai.com
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__add-social visible-on-tablet">
+					<h4>
+						Слідкуй за нами тут:
+					</h4>
+					<ul>
+						<li>
+							<a href="#" aria-label="Підписатись">
+								<img src="img/social/instagram.svg" width="38" height="38" loading="lazy" alt="">
+								<span>Підписатись</span>
+								<picture>
+									<source srcset="img/finger.avif" type="image/avif">
+									<source srcset="img/finger.webp" type="image/webp">
+									<img src="img/finger.png" width="38" height="38" loading="lazy" alt="">
+								</picture>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__copy">
+				ZEMEXPERT 2023 Всі права захищені
+			</div>
+		</footer>
+	</div>
+
+	<div class="feedback-popup popup" id="order-service">
+		<div class="feedback-popup__wrapper popup-wrapper">
+			<div class="feedback-popup__bg popup-bg popup-close"></div>
+			<div class="feedback-popup__body popup-body">
+				<button type="button" class="feedback-popup__close-btn popup-close-btn popup-close" title="Закрити">
+					<svg width="36" height="36" viewBox="0 0 36 36">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<form method="post" class="feedback-popup__form feedback-form">
+					<h2 class="feedback-form__title title _min">
+						Зворотній зв’язок
+					</h2>
+					<div class="feedback-form__wrapper">
+						<label>
+							<input type="text" name="your-name" placeholder="Ім’я" required class="input">
+						</label>
+						<label>
+							<input type="tel" name="phone" placeholder="Номер телефону" required class="input">
+						</label>
+						<button class="btn _large" type="submit">
+							Замовити послугу
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="js/libs.min.js"></script> -->
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

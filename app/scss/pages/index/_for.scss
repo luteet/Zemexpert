@@ -1,0 +1,59 @@
+.for {
+
+	padding-top: 39px; padding-bottom: 41px;
+
+	display: grid;
+	@include _768 {
+		grid-template-columns: 45% auto;
+	}
+	gap: 30px;
+	@include _992 {
+		gap: 80px;
+
+		padding-top: 131px; padding-bottom: 113px;
+	}
+
+	// .for__col
+
+	&__col {
+		align-self: center;
+	}
+
+	// .for__title
+
+	&__title {
+		text-align: center;
+		@include _768 {
+			text-align: left;
+		}
+	}
+
+	// .for__btn
+
+	&__btn {
+		margin-top: 31px;
+	}
+
+	// .for__list
+
+	&__list {
+		li {
+
+			font-size: 0.875rem;
+			
+			@include _768 {
+				font-size: 1rem;
+			}
+
+			display: flex;
+			fill: #BDD7E8;
+			svg {
+				flex: 0 0 20px;
+				margin-top: 3px; margin-right: 10px;
+			}
+			&:not(:first-child) {
+				margin-top: 15px;
+			}
+		}
+	}
+}

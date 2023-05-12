@@ -1,0 +1,221 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="hero container accent-bg">
+			<div class="hero__image">
+				<div class="hero__image--body image-body">
+					<picture>
+						<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
+						<source srcset="img/index/hero/index-hero-image.webp" type="image/webp">
+						<img src="img/index/hero/index-hero-image.png" alt="" width="430" height="687" loading="lazy">
+					</picture>
+				</div>
+			</div>
+			<div class="hero__content">
+				<span class="hero__subtitle subtitle">
+					Працюємо по всій Україні
+				</span>
+				<h1 class="hero__title main-title">
+					Отримання кадастрового номеру
+				</h1>
+				<div class="hero__text">
+					<p>
+						Юридична допомога з питань оформлення кадастрового номера на земельну ділянкуі
+					</p>
+				</div>
+				<a href="#order-service" class="hero__btn btn open-popup">
+					Замовити послугу
+				</a>
+			</div>
+		</section>
+		<section class="for container">
+			<div class="for__col">
+				<h2 class="for__title title">
+					Для чого потрібен кадастровий номер
+				</h2>
+				<a href="#order-service" class="for__btn btn open-popup hide-on-mob">
+					Дізнатися детальніше
+				</a>
+			</div>
+			<div class="for__col">
+				<ul class="for__list">
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						купівлі-продажу будинку;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						купівлі-продажу земельної ділянки;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						договору дарування будинку;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						договору дарування земельної ділянки;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						приватизації земельної ділянки;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						заключення договору оренди;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						продовження договору оренди;
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#next"></use>
+						</svg>
+						отримання спадщіни;
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="how container accent-bg">
+			<h2 class="how__title title">
+				Як отримати кадастровий номер на землю
+			</h2>
+			<div class="how__note">
+				<h3>
+					Процес отримання кадастрового номера на земельну ділянку разом з ZEMEXPERT - зрозумілий та швидкий
+				</h3>
+				<p>
+					Наша компанія є лідером в галузі земельного права, і ми з радістю продемонструємо свій профессіоналізм та вирішимо ваше питання легко, швидко і за приємною ціною
+				</p>
+			</div>
+			<form method="post" class="how__form">
+				<h3>
+					Дізнатись детальніше
+				</h3>
+				<div class="how__form--wrapper">
+					<label>
+						<input type="text" name="your-name" placeholder="Ім'я" required class="input">
+					</label>
+					<label>
+						<input type="tel" name="phone" placeholder="Номер телефону" required class="input">
+					</label>
+					<button class="btn" type="submit">
+						Надіслати
+					</button>
+				</div>
+			</form>
+		</section>
+		<section class="documents container">
+			<h2 class="documents__title title txt-center">
+				Список необхідних документів
+			</h2>
+			<ul class="documents__list">
+				@@loop("html/_document-card.html", [
+					{
+						"image": '1',
+						"image_text": 'КОПІЯ',
+						"text": 'Паспорт',
+					},
+					{
+						"image": '2',
+						"image_text": 'КОПІЯ',
+						"text": 'ІІН',
+					},
+					{
+						"image": '3',
+						"image_text": 'КОПІЯ',
+						"text": 'Рішення органу місцевого самоврядування на виготовлення технічної документації (у разі приватизації)',
+					},
+					{
+						"image": '4',
+						"image_text": 'оригінал',
+						"text": 'Державний акт (за наявності)',
+					},
+					{
+						"image": '5',
+						"image_text": 'HOT КОПІЯ',
+						"text": 'Правоустановчі документи на будівлі (за наявності)',
+					},
+					{
+						"image": '6',
+						"image_text": 'КОПІЯ',
+						"text": 'Технічний паспорт (за наявності)',
+					},
+				])
+			</ul>
+		</section>
+		<section class="causes container">
+			<h2 class="causes__title title txt-center">
+				Чому клієнти обирають ZEM
+			</h2>
+			<ul class="causes__list">
+				<li class="causes__card">
+					<div class="causes__card--image">
+						<div class="causes__card--image-body image-body">
+							<picture>
+								<source srcset="img/index/causes/causes-sticker-1.avif" type="image/avif">
+								<source srcset="img/index/causes/causes-sticker-1.webp" type="image/webp">
+								<img src="img/index/causes/causes-sticker-1.png" alt="" width="200" height="200" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<h3>
+						Швідкість та <br> зручність
+					</h3>
+					<p>
+						Ми працюємо в будь якій точці України. Також для вашого комфорту та економії часу  маємо можливість виконати роботу навіть дистанційно. 
+					</p>
+				</li>
+				<li class="causes__card">
+					<div class="causes__card--image">
+						<div class="causes__card--image-body image-body">
+							<picture>
+								<source srcset="img/index/causes/causes-sticker-2.avif" type="image/avif">
+								<source srcset="img/index/causes/causes-sticker-2.webp" type="image/webp">
+								<img src="img/index/causes/causes-sticker-2.png" alt="" width="200" height="200" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<h3>
+						Гарантований результат та безпека
+					</h3>
+					<p>
+						Для нас не їснує задач, які б наши фахівці не могли виконати. В іншому випадку повернемо гроші в 100% обсязі
+					</p>
+				</li>
+				<li class="causes__card">
+					<div class="causes__card--image">
+						<div class="causes__card--image-body image-body">
+							<picture>
+								<source srcset="img/index/causes/causes-sticker-3.avif" type="image/avif">
+								<source srcset="img/index/causes/causes-sticker-3.webp" type="image/webp">
+								<img src="img/index/causes/causes-sticker-3.png" alt="" width="200" height="200" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<h3>
+						Лідерські позиции в галузі землеустрою
+					</h3>
+					<p>
+						За 10 років існування компанії допомогли сотням клієнтів отримати документи з позитивним результатом, тому що ми знаємо про землю все
+					</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

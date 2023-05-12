@@ -1,0 +1,36 @@
+.feedback-form {
+
+	background: var(--white);
+
+	padding: 33px 15px 39px 15px;
+	@include _550 {
+		padding: 38px 41px;
+	}
+	border-radius: 30px;
+
+	text-align: center;
+
+	// .feedback-form__title
+
+	&__title {
+		color: var(--black);
+	}
+
+	// .feedback-form__wrapper
+
+	&__wrapper {
+		margin-top: 29px;
+
+		> * {
+			margin-top: 15px;
+		}
+
+		label {
+			display: block;
+		}
+
+		[type="submit"] {
+			width: 100%;
+		}
+	}
+}
